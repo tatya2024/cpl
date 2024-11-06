@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+	    body
+	    {
+		    background-color:black;
+	    }
+      .fb {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .btn {
+        height: 3rem;
+        width: 20rem;
+        margin: 1rem;
+      background-color:grey;
+	      color:white;
+	      
+      }
+      .btn:hover {
+        cursor: grab;
+      }
+    </style>
+    <script>
+      function f1() {
+        const txt= `# Read the string "Hello World" from the user
+user_input = input("Enter the string: ")
+
+# Initialize an empty string to store the result without spaces
+result = ""
+
+# Loop through each character in the input string
+for char in user_input:
+    if char == " ":
+        continue  # Skip spaces
+    result += char  # Append non-space characters
+
+# Display the result without spaces
+print("String without spaces:", result)
+
+
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';
+
+      }
+
+      function f2() {
+        const txt= `# Function to print Fibonacci series up to n numbers
+def fibonacci_series(n):
+    # Starting values for the series
+    a, b = 0, 1
+    series = []
+    
+    # Generate Fibonacci numbers up to n
+    for _ in range(n):
+        series.append(a)
+        a, b = b, a + b  # Update values for next number in series
+    
+    return series
+
+# Take input from the user
+n = int(input("Enter the number of terms: "))
+
+# Display the Fibonacci series
+print("Fibonacci series:", fibonacci_series(n))
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f3() {
+        const txt= `# Display multiplication tables from 1 to 5
+for i in range(1, 6):  # Loop through numbers 1 to 5
+    print(f"Multiplication Table of {i}:")
+    for j in range(1, 11):  # Multiplication from 1 to 10
+        print(f"{i} x {j} = {i * j}")
+    print()  # Newline for better readability`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f4() {
+        const txt= `# Function to reverse the entered number
+def reverse_number(number):
+    # Convert the number to string, reverse it, and convert back to integer
+    reversed_number = int(str(number)[::-1])
+    return reversed_number
+
+# Take input from the user
+number = int(input("Enter a number: "))
+
+# Display the reversed number
+print("Reversed number:", reverse_number(number))`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f5() {
+        const txt= `import math
+
+# Function to calculate the distance between two points
+def calc_distance(x1, y1, x2, y2):
+    distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    return distance
+
+# Example coordinates of two points
+x1, y1 = 3, 4
+x2, y2 = 7, 1
+
+# Calculate and display the distance
+print(f"Distance between ({x1}, {y1}) and ({x2}, {y2}) is {calc_distance(x1, y1, x2, y2):.2f}")
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f6() {
+        const txt= `# Function to find the factorial of a number
+def factorial(n):
+    # Factorial of 0 or 1 is 1
+    if n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):  # Multiply each number up to n
+            result *= i
+        return result
+
+# Take input from the user
+number = int(input("Enter a number: "))
+
+# Display the factorial of the entered number
+print(f"Factorial of {number} is {factorial(number)}")
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f7() {
+        const txt= `# Function to demonstrate positional and keyword arguments
+def introduce(name, age, country="India"):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Country: {country}")
+
+# Using positional arguments
+introduce("Alice", 30)
+
+# Using a mix of positional and keyword arguments
+introduce("Bob", age=25, country="USA")
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f8() {
+        const txt= `# Function to return square and cube of a number
+def square_and_cube(n):
+    square = n ** 2
+    cube = n ** 3
+    return square, cube  # Returning both values
+
+# Take input from the user
+number = int(input("Enter a number: "))
+
+# Get square and cube of the number
+square, cube = square_and_cube(number)
+
+# Display the results
+print(f"Square of {number} is {square}")
+print(f"Cube of {number} is {cube}")
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f9() {
+        const txt= `# List of Celsius values
+celsius_values = [0, 20, 25, 30, 35]
+
+# Convert Celsius to Fahrenheit and store in a new list
+fahrenheit_values = [(c * 9/5) + 32 for c in celsius_values]
+
+# Display the converted values
+print("Celsius values:", celsius_values)
+print("Fahrenheit values:", fahrenheit_values)
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f10() {
+        const txt= `# Function to generate a character frequency dictionary
+def histogram(s):
+    frequency = {}
+    for char in s:
+        frequency[char] = frequency.get(char, 0) + 1
+    return frequency
+
+# Test string
+S = "AAPPLE"
+
+# Generate and display the frequency dictionary
+D = histogram(S)
+print("Character frequency dictionary:", D)
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+function f11() {
+        const txt= `# Original tuple
+T = (1, 3, 2, 4, 6, 5)
+
+# Store elements at odd indices (1, 3, 5, ...)
+odd_index_tuple = tuple(T[i] for i in range(len(T)) if i % 2 != 0)
+
+# Display the new tuple
+print("New tuple with elements at odd indices:", odd_index_tuple)
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+
+      function f12() {
+        const txt= `# List of tuples
+tuples_list = [(1, 2), (3, 4), (5, 6), (7, 8)]
+
+# Traverse and print each element in the tuples
+for t in tuples_list:
+    for element in t:
+        print(element, end=" ")
+    print()  # Newline after each tuple`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+
+      }
+      function f13() {
+        const txt= `import math
+    
+        def find_hypotenuse(length, breadth) :
+            hypotenuse = math.hypot(length, breadth)
+            return hypotenuse
+        
+        print("Enter the length and breadth of the right angled triangle : ")
+        length = int(input("Enter the length of the triangle : "))
+        breadth = int(input("Enter the breadth of the triangle : "))
+        hypotenuse = find_hypotenuse(length, breadth)
+        print(f"The hypotenuse of the triangle is : {hypotenuse}")`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f14() {
+        const txt= `def print_letter(string1, string2) :
+        set1 = set(string1) - {' '}
+        set2 = set(string2) - {' '}
+    
+        common_letter = set(set1 & set2)
+    
+        print(f"The common letters from both words are : {common_letter}")
+    
+    word1 = input("Enter the first word : ")
+    word2 = input("Enter the second word : ")
+    
+    print_letter(word1, word2)`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+
+    function f15() {
+        const txt= `# Define the Person class
+        class Person:
+            # Constructor method to initialize attributes
+            def _init_(self, name, age):
+                self.name = name  # Person's name
+                self.age = age    # Person's age
+            
+            # Method to display person's details
+            def introduce(self):
+                print(f"Hi, my name is {self.name} and I am {self.age} years old.")
+        
+        # Taking input from User
+        user_name = input("Enter ur Name : ")
+        user_age = input("Enter ur Age : ")
+        
+        # Creating an instance (object) of the Person class
+        person1 = Person(user_name, user_age)
+        
+        # Using the method
+        person1.introduce()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+
+    function f16() {
+        const txt= `# Define the Box class
+        class Box:
+            # Constructor to initialize length, width, and height
+            def _init_(self, length, width, height):
+                self.length = length  # Member variable for length
+                self.width = width    # Member variable for width
+                self.height = height  # Member variable for height
+            
+            # Member function to calculate volume
+            def calculate_volume(self):
+                return self.length * self.width * self.height
+            
+        # Taking input from the User
+        box_length = int(input("Enter the length of the Box : "))
+        box_height = int(input("Enter the height of the Box : "))
+        box_width = int(input("Enter the width of the Box : "))
+        
+        # Create an instance (object) of the Box class
+        box1 = Box(box_length, box_width, box_height)
+        
+        # Calculate and print the volume of the box
+        volume = box1.calculate_volume()
+        print(f"The volume of the box is: {volume}")`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f17() {
+        const txt= `import matplotlib.pyplot as plt
+        import numpy as np
+        
+        # Data for plots
+        x = [1, 2, 3, 4, 5]
+        y = [1, 4, 9, 16, 25]
+        
+        # Line Plot
+        plt.figure(figsize=(10, 5))
+        plt.subplot(1, 3, 1)
+        plt.plot(x, y, marker='o')
+        plt.title('Line Plot')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        # Bar Plot
+        plt.subplot(1, 3, 2)
+        plt.bar(x, y)
+        plt.title('Bar Plot')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        # Scatter Plot
+        plt.subplot(1, 3, 3)
+        plt.scatter(x, y)
+        plt.title('Scatter Plot')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        plt.tight_layout()
+        plt.show()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f18() {
+        const txt= `import matplotlib.pyplot as plt
+        import numpy as np
+        
+        # Create a range of x values
+        x = np.linspace(-10, 10, 400)
+        
+        # Calculate y values for each equation
+        y1 = x
+        y2 = x**2
+        y3 = x**3
+        
+        # Create a figure with three subplots
+        plt.figure(figsize=(10, 5))
+        
+        # Plot Y = X
+        plt.subplot(1, 3, 1)
+        plt.plot(x, y1)
+        plt.title('Y = X')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        # Plot Y = X^2
+        plt.subplot(1, 3, 2)
+        plt.plot(x, y2)
+        plt.title('Y = X^2')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        # Plot Y = X^3
+        plt.subplot(1, 3, 3)
+        plt.plot(x, y3)
+        plt.title('Y = X^3')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        
+        plt.tight_layout()
+        plt.show()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f19() {
+        const txt= `import matplotlib.pyplot as plt
+        import numpy as np
+        
+        # Create a range of x values
+        x = np.linspace(0, 4 * np.pi, 1000)
+    
+        # Calculate y values for sine and cosine waves
+        y_sin = np.sin(x)
+        y_cos = np.cos(x)
+    
+        # Create a plot
+        plt.figure(figsize=(10, 5))
+        plt.plot(x, y_sin, label='Sine Wave')
+        plt.plot(x, y_cos, label='Cosine Wave')
+        plt.title('Sine and Cosine Waves')
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        plt.legend()
+        plt.show()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f20() {
+        const txt= `# To create Graphical User interfaces(GUIs) in python using Tkinter package
+        import tkinter as tk
+        
+        def submit_credentials():
+            website=website_entry.get()
+            username=username_entry.get()
+            password=password_entry.get()
+        
+            print("website:", website)
+            print("Username:", username)
+            print("Password:", password)
+        
+        root=tk.Tk()
+        root.title("Password Manager")
+        root.geometry("400x250")
+        
+        frame=tk.Frame(root,bg='grey')
+        frame.place(relheight=1, relwidth=1)
+        
+        website_label=tk.Label(root,text="WebsiteName", bg='black', fg='white', font=14)
+        website_label.pack(pady=5)
+        website_entry=tk.Entry(root)
+        website_entry.pack(pady=5)
+        
+        username_label=tk.Label(root,text="UserName",bg='black', fg='white',font=14)
+        username_label.pack(pady=5)
+        username_entry=tk.Entry(root)
+        username_entry.pack(pady=5)
+        
+        password_label=tk.Label(root,text="Password", bg='black',fg='white',font=14)
+        password_label.pack(pady=5)
+        password_entry=tk.Entry(root,show="*")
+        password_entry.pack(pady=5)
+        
+        save_button=tk.Button(root,text="Save",bg='white',fg='black',font=("Helvetica",16),command=submit_credentials)
+        save_button.pack(pady=5)
+        
+        root.mainloop()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f22() {
+        const txt= `import pandas as pd
+
+df = pd.read_csv(r'C:\Users\omjum\OneDrive\Desktop\chor log\CPL-1\P8\data.csv')
+
+print("Missing data in each column:")
+print(df.isna().sum())
+
+df_cleaned = df.dropna()
+
+df['Diastolic_BP'] = df['Diastolic_BP'].fillna(df['Diastolic_BP'].mean())
+df['Skin_Fold'] = df['Skin_Fold'].fillna(df['Skin_Fold'].mean())
+df['BMI'] = df['BMI'].fillna(df['BMI'].mean())
+df['Serum_Insulin'] = df['Serum_Insulin'].fillna(df['Serum_Insulin'].mean())
+
+print(df.head())
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+
+    function f23() {
+        const txt= `def read_write_file():
+        file_name = input("Enter the file name: ")
+        with open(file_name, 'w') as file:
+            text = input("Enter the text to write to the file: ")
+            file.write(text)
+        with open(file_name, 'r') as file:
+            print("File contents:")
+            print(file.read())
+    read_write_file()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f24() {
+        const txt= `def copy_file():
+        source_file_name = input("Enter the source file name: ")
+        destination_file_name = input("Enter the destination file name: ")
+        with open(source_file_name, 'r') as source_file:
+            with open(destination_file_name, 'w') as destination_file:
+                destination_file.write(source_file.read())
+        print("File copied successfully!")
+    copy_file()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f25() {
+        const txt= `def count_character_frequency():
+        file_name = input("Enter the file name: ")
+        with open(file_name, 'r') as file:
+            text = file.read()
+        frequency = {}
+        for char in text:
+            if char in frequency:
+                frequency[char] += 1
+            else:
+                frequency[char] = 1
+        print("Character frequency:")
+        for char, count in frequency.items():
+            print(f"{char}: {count}")
+    count_character_frequency()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f26() {
+        const txt= `def print_lines_in_reverse():
+        file_name = input("Enter the file name: ")
+        with open(file_name, 'r') as file:
+            lines = file.readlines()
+        for line in reversed(lines):
+            print(line.strip())
+    print_lines_in_reverse()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f27() {
+        const txt= `def count_characters_words_lines():
+        file_name = input("Enter the file name: ")
+        with open(file_name, 'r') as file:
+            text = file.read()
+        num_characters = len(text)
+        num_words = len(text.split())
+        num_lines = len(text.splitlines())
+        print(f"Number of characters: {num_characters}")
+        print(f"Number of words: {num_words}")
+        print(f"Number of lines: {num_lines}")
+    count_characters_words_lines()`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f28() {
+        const txt= `# Example
+        my_list = [1, 2, 3, 4, 5]
+        print(my_list)  # Output: [1, 2, 3, 4, 5]
+        
+        # Example
+        my_list = list((1, 2, 3, 4, 5))  # From a tuple
+        print(my_list)  # Output: [1, 2, 3, 4, 5]
+        
+        # Example
+        my_list = [x**2 for x in range(5)]  # Squares of numbers from 0 to 4
+        print(my_list)  # Output: [0, 1, 4, 9, 16]
+        
+        # Example
+        my_list = [0] * 5  # List with five zeros
+        print(my_list)  # Output: [0, 0, 0, 0, 0]
+        
+        my_list = list("hello")  # Converts string to list of characters
+        print(my_list)  # Output: ['h', 'e', 'l', 'l', 'o']`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f29() {
+        const txt= `my_list = [1, 2, 3, 4]
+        print(len(my_list))  # Output: 4
+        
+        my_list = [1, 2, 2, 3]
+        print(my_list.count(2))  # Output: 2
+        
+        my_list = [1, 2, 3, 2]
+        print(my_list.index(2))  # Output: 1 (first occurrence)
+        
+        my_list = [1, 2, 3]
+        my_list.append(4)
+        print(my_list)  # Output: [1, 2, 3, 4]
+        
+        my_list = [1, 2, 3]
+        my_list.insert(1, 1.5)  # Insert 1.5 at index 1
+        print(my_list)  # Output: [1, 1.5, 2, 3]
+        
+        my_list = [1, 2]
+        my_list.extend([3, 4])
+        print(my_list)  # Output: [1, 2, 3, 4]
+        
+        my_list = [1, 2, 3, 2]
+        my_list.remove(2)  # Removes the first occurrence of 2
+        print(my_list)  # Output: [1, 3, 2]
+        
+        my_list = [1, 2, 3]
+        popped_value = my_list.pop()  # Removes and returns the last item
+        print(popped_value)  # Output: 3
+        print(my_list)  # Output: [1, 2]
+        
+        my_list = [1, 2, 3]
+        my_list.reverse()
+        print(my_list)  # Output: [3, 2, 1]
+        
+        my_list = [3, 1, 2]
+        my_list.sort()
+        print(my_list)  # Output: [1, 2, 3]
+        
+        my_list = [1, 2, 3]
+        copied_list = my_list.copy()
+        print(copied_list) `;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+    function f30() {
+        const txt= `# Original list
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Slice from index 2 to 5
+slice1 = my_list[2:6]
+print("Slice from index 2 to 5:", slice1)
+
+# Slice with step
+slice2 = my_list[::2]  # Every second element
+print("Slice with step 2:", slice2)
+
+# Slice in reverse
+slice3 = my_list[::-1]
+print("Reversed list:", slice3)
+`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+
+    function f31() {
+        const txt= `# List of squares using list comprehension
+squares = [x**2 for x in range(1, 11)]
+print("Squares:", squares)
+
+# List comprehension with condition (even numbers)
+evens = [x for x in range(1, 11) if x % 2 == 0]
+print("Even Numbers:", evens)`;
+        navigator.clipboard.writeText(txt);
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
+    
+    }
+
+    </script>
+  </head>
+  <body>
+    <div class="fb">
+      <button class="btn" onclick="f1()">p1_continue</button>
+      <button class="btn" onclick="f2()">p1_febonachii</button>
+      <button class="btn" onclick="f3()">p1_multitable</button>
+      <button class="btn" onclick="f4()">p1_reverseno</button>
+      <button class="btn" onclick="f5()">p2_dist</button>
+      <button class="btn" onclick="f6()">p2_factorial</button>
+      <button class="btn" onclick="f7()">p2_posarguement</button>
+      <button class="btn" onclick="f8()">p2_sq&cubeofnum</button>
+      <button class="btn" onclick="f9()">p3_celcius to faren</button>
+      <button class="btn" onclick="f10()">p3_histogram</button>
+      <button class="btn" onclick="f11()">p3_num at odd print</button>
+      <button class="btn" onclick="f12()">p3_traverse tupple</button>
+      <button class="btn" onclick="f13()">p4_hypotense</button>
+      <button class="btn" onclick="f14()">p4_common words</button>
+      <button class="btn" onclick="f15()">p4_oops</button>
+      <button class="btn" onclick="f16()">p4_volume of box</button>
+      <button class="btn" onclick="f17()">p5,p6_plotting</button>
+      <button class="btn" onclick="f18()">p5,p6_subplot for line equation</button>
+      <button class="btn" onclick="f19()">p5,p6_sine,cos wave</button>
+      <button class="btn" onclick="f20()">p7_tkinter gui</button>
+      <button class="btn" onclick="f21()">p8_dbms connect</button>
+      <button class="btn" onclick="f22()">p9_pandas csv</button>
+      <button class="btn" onclick="f23()">p10_read,write files</button>
+      <button class="btn" onclick="f24()">p10_copy file content</button>
+      <button class="btn" onclick="f25()">p10_count frequency of chracters</button>
+      <button class="btn" onclick="f26()">p10_print reverse order of line</button>
+      <button class="btn" onclick="f27()">p10_compute no of chracters word lines in file</button>
+      <button class="btn" onclick="f28()">p11_various create functions of list</button>
+      <button class="btn" onclick="f29()">p11_various functions of list operation</button>
+      <button class="btn" onclick="f30()">p11_list slicing</button>
+      <button class="btn" onclick="f31()">p11_list comprehension</button>
+      
+      
+
+
+      
+    </div>
+  </body>
+</html>
