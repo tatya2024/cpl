@@ -538,47 +538,44 @@ print(df.head())
     }
     function f25() {
         const txt= `def count_character_frequency():
-        file_name = input("Enter the file name: ")
-        with open(file_name, 'r') as file:
-            text = file.read()
-        frequency = {}
-        for char in text:
-            if char in frequency:
-                frequency[char] += 1
-            else:
-                frequency[char] = 1
-        print("Character frequency:")
-        for char, count in frequency.items():
-            print(f"{char}: {count}")
-    count_character_frequency()`;
+    with open(r'enter file path', 'r') as file:
+        text = file.read()
+    frequency = {}
+    for char in text:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+    print("Character frequency:")
+    for char, count in frequency.items():
+        print(f"{char}: {count}")
+count_character_frequency()`;
         navigator.clipboard.writeText(txt);
         document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
     
     }
     function f26() {
         const txt= `def print_lines_in_reverse():
-        file_name = input("Enter the file name: ")
-        with open(file_name, 'r') as file:
-            lines = file.readlines()
-        for line in reversed(lines):
-            print(line.strip())
-    print_lines_in_reverse()`;
+    with open(r'/enter file path here by removing this/', 'r') as file:
+        lines = file.readlines()
+    for line in reversed(lines):
+        print(line.strip())
+print_lines_in_reverse()`;
         navigator.clipboard.writeText(txt);
         document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
     
     }
     function f27() {
         const txt= `def count_characters_words_lines():
-        file_name = input("Enter the file name: ")
-        with open(file_name, 'r') as file:
-            text = file.read()
-        num_characters = len(text)
-        num_words = len(text.split())
-        num_lines = len(text.splitlines())
-        print(f"Number of characters: {num_characters}")
-        print(f"Number of words: {num_words}")
-        print(f"Number of lines: {num_lines}")
-    count_characters_words_lines()`;
+    with open(r'/enter file path here by removing this/', 'r') as file:
+        text = file.read()
+    num_characters = len(text)
+    num_words = len(text.split())
+    num_lines = len(text.splitlines())
+    print(f"Number of characters: {num_characters}")
+    print(f"Number of words: {num_words}")
+    print(f"Number of lines: {num_lines}")
+count_characters_words_lines()`;
         navigator.clipboard.writeText(txt);
         document.getElementsByTagName('body')[0].style.backgroundColor = 'black';;
     
